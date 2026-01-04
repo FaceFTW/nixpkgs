@@ -18,6 +18,10 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [ autoreconfHook ];
 
+  NIX_CFLAGS_COMPILE = [
+    "-std=gnu17"
+  ];
+
   meta = {
     description = "HID report descriptor I/O library and conversion tool";
     homepage = "https://github.com/DIGImend/hidrd";
